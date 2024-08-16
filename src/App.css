@@ -6,26 +6,30 @@
 
   padding: 1em;
   color: #fff;
+  background-color: #242424;
+
+  height: 100%;
 }
 
 .app > h1 {
   text-align: center;
   color: gray;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
+  margin-bottom: 1em;
 }
 
 .tabs button {
   text-transform: uppercase;
   font-weight: 700;
   padding: 0.6em 0.7em;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
-button.active {
+.tabs button.active {
   border-bottom: aqua 0.125em solid;
+  /* color: aqua */
 }
 
 .content {
@@ -40,7 +44,7 @@ button.active {
   flex-direction: column;
   width: 100%;
 
-  margin: 0.2em;
+  margin-top: 0.2em;
 }
 
 .spec-container > h2 {
@@ -62,27 +66,40 @@ button.active {
   background: linear-gradient(to right, #242424, aqua);
 }
 
-.spec-list > h3 {
+.spec-list h3 {
   text-transform: uppercase;
+
+  margin: 0;
+}
+
+.spec-list p {
+  margin-top: 0.3em;
+}
+
+.spec-list {
+  padding: 0;
+  margin: 0;
 }
 
 .spec-list li {
   list-style-type: none;
+  margin-top: 1.5em;
 }
 
 @media (max-width: 600px) {
-  body {
+  html {
     font-size: 0.7em;
   }
 
   .content {
     width: 100%;
+    /* flex-wrap: wrap; */
   }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
   html {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
 }
 
@@ -93,5 +110,6 @@ button.active {
 
   .content {
     width: 80%;
+    flex-wrap: nowrap;
   }
 }
