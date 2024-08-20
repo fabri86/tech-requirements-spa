@@ -1,6 +1,6 @@
 export default [
   {
-    os: 'windows',
+    os: 'Windows',
     requirements: [
       {
         title: 'OS',

@@ -8,22 +8,25 @@ const rearrangeSpecs = (system) => {
 
       return specs
     },
-    { min: [], rec: [] }
+    { min: [], rec: [], osName: system.os }
   )
 }
 
 const [windows, mac] = data
 
-const { min: windowsMin, rec: windowsRec } = rearrangeSpecs(windows)
-const { min: macMin, rec: macRec } = rearrangeSpecs(mac)
+const { min: windowsMin, rec: windowsRec, osName: winTabName } = rearrangeSpecs(windows)
+
+const { min: macMin, rec: macRec, osName: macTabName } = rearrangeSpecs(mac)
 
 export const getSpecs = () => [
   {
     min: windowsMin,
     rec: windowsRec,
+    osName: winTabName,
   },
   {
     min: macMin,
     rec: macRec,
+    osName: macTabName,
   },
 ]
